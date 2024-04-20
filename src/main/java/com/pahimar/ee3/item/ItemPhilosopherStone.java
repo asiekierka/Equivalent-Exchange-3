@@ -70,10 +70,12 @@ public class ItemPhilosopherStone extends ItemEE
 
     @Override
     public ItemStack getContainerItemStack(ItemStack itemStack) {
+        ItemStack copiedStack = itemStack.copy();
 
-        itemStack.setItemDamage(itemStack.getItemDamage() + 1);
+        copiedStack.setItemDamage(copiedStack.getItemDamage() + 1);
+        copiedStack.stackSize = 1;
 
-        return itemStack;
+        return copiedStack;
     }
 
     @Override
